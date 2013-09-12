@@ -1,0 +1,59 @@
+{% extends templates.base %}
+
+{% block content %}
+    <div id="content_part">
+      <hr>
+
+      <!-- <a href="" title="">Więcej o projekcie</a>  -->
+
+      <form method="GET" action="{% url 'stWeb.views.searchResults' %}" id="advanced_search_form">
+        <input type="hidden" name="type" value="adv">
+        <input type="hidden" name="view" value="grid">
+        
+        <div class="form_row">
+          <label>Autor:</label>
+          <div class="input_column"><input name="autor" type="text" placeholder="|"></div>
+        </div>
+
+        <div class="form_row">
+          <label>Tytuł:</label>
+          <div class="input_column"><input name="tytul" type="text" placeholder="|"></div>
+        </div>
+
+        <div class="form_row">
+          <label>Miejsce:</label>
+          <div class="input_column"><input name="miejsce" type="text" placeholder="|"></div>
+        </div>
+
+        <div class="form_row">
+          <label>Data</label>
+           <div class="input_column">
+            <span>od:</span> <input name="dataOd" class="data" type="text" placeholder="|">
+            <span>do:</span> <input name="dataDo" class="data" type="text" placeholder="|">
+        </div></div>
+
+        <div class="form_row">
+          <label>Wydawca:</label>
+          <div class="input_column"><input name="wydawca" type="text" placeholder="|"></div>
+        </div>
+        <div class="form_row">
+          <label>Sygnatura:</label>
+          <div class="input_column"><input name="sygnatura" type="text" placeholder="|"></div>
+        </div>
+
+        
+
+       
+        <div class="submit_conteiner">
+           <hr>
+          <div class="wrap">
+            <div class="button_wrap">
+              <button type="">Szukaj</button>
+            </div> 
+          </div>
+        </div>
+     
+      </form>  
+
+    </div>
+{% endblock %}
